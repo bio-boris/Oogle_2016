@@ -7,10 +7,10 @@
 
 #Unzip
 cd /home/sadkhin2/scratch/phytozome_11
-find | grep protein.fa.gz | xargs gunzip
+find | grep protein.fa.gz$ | xargs gunzip
 
 #Format
-find | grep protein.fa  | grep -v early_release > list_of_protein_databases
+find | grep protein.fa$  | grep -v early_release > list_of_protein_databases
 for db in `cat list_of_protein_databases`
 do
         command="time formatdb -pT -i $db"
