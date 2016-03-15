@@ -13,6 +13,8 @@ CREATE TABLE `BLAST` (
  `subject_pac` int(11) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=latin
 
+LOAD DATA INFILE '/home/sadkhin2/blast' INTO TABLE BLAST fields terminated by '\t';
+
 #Chromosomes
 CHR	CREATE TABLE `CHR` (
  `query_org` varchar(255) NOT NULL,
@@ -23,6 +25,8 @@ CHR	CREATE TABLE `CHR` (
  `stop` int(11) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1
 
+LOAD DATA INFILE '/home/sadkhin2/allChromo' INTO TABLE CHR fields terminated by '\t';
+
 #Annotations
 
 ANNOTATIONS	CREATE TABLE `ANNOTATIONS` (
@@ -31,20 +35,21 @@ ANNOTATIONS	CREATE TABLE `ANNOTATIONS` (
  `locusName` varchar(255) NOT NULL,
  `transcriptName` varchar(255) NOT NULL,
  `peptideName` varchar(255) NOT NULL,
- `Pfam` varchar(255) NOT NULL,
- `Panther` varchar(255) NOT NULL,
- `KOG` varchar(255) NOT NULL,
- `KEGG/EC` varchar(255) NOT NULL,
- `KO` varchar(255) NOT NULL,
- `GO` varchar(255) NOT NULL,
- `Best-hit-arabi-name` varchar(255) NOT NULL,
- `arabi-symbol` varchar(255) NOT NULL,
- `arabi-defline` varchar(255) NOT NULL,
- `Best-hit-chlamy-name` varchar(255) NOT NULL,
- `chlamy-symbol` varchar(255) NOT NULL,
- `chlamy-defline` varchar(255) NOT NULL
+ `Pfam` varchar(255) ,
+ `Panther` varchar(255),
+ `KOG` varchar(255) ,
+ `KEGG/EC` varchar(255) ,
+ `KO` varchar(255)  ,
+ `GO` varchar(255)  ,
+ `Best-hit-arabi-name` varchar(255) ,
+ `arabi-symbol` varchar(255) ,
+ `arabi-defline` varchar(255) ,
+ `Best-hit-chlamy-name` varchar(255) ,
+ `chlamy-symbol` varchar(255) ,
+ `chlamy-defline` varchar(255) 
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1
 
+LOAD DATA INFILE '/home/sadkhin2/annotation_info.TABLE.cleansed' INTO TABLE ANNOTATIONS fields terminated by '\t';
 
 #Organisms
 #Monocot, dicot, etc, common, latin, photo, version
