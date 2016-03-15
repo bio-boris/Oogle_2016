@@ -16,8 +16,8 @@ CREATE TABLE `BLAST` (
 #Chromosomes
 CHR	CREATE TABLE `CHR` (
  `query_org` varchar(255) NOT NULL,
- `query_pac` int(11) NOT NULL,
- `query_id` varchar(255) NOT NULL,
+ `query_id`  varchar(255) NOT NULL,
+ `query_pac`int(11)  NOT NULL,
  `chr` varchar(255) NOT NULL,
  `start` int(11) NOT NULL,
  `stop` int(11) NOT NULL
