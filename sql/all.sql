@@ -11,7 +11,7 @@ CREATE TABLE `BLAST` (
  `rank` int(11) NOT NULL,
  `query_pac` int(11) NOT NULL,
  `subject_pac` int(11) NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=latin
+) ENGINE=MyISAM DEFAULT CHARSET=latin1
 
 LOAD DATA INFILE '/home/sadkhin2/blast' INTO TABLE BLAST fields terminated by '\t';
 
