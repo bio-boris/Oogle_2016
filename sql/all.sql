@@ -13,7 +13,7 @@ CREATE TABLE `BLAST` (
  `subject_pac` int(11) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1
 
-LOAD DATA INFILE '/home/sadkhin2/blast' INTO TABLE BLAST fields terminated by '\t';
+LOAD DATA INFILE '/home/sadkhin2/blast' INTO TABLE BLAST using insert.pl
 
 #Chromosomes
 CHR	CREATE TABLE `CHR` (
