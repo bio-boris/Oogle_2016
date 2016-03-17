@@ -55,10 +55,8 @@ LOAD DATA INFILE '/home/sadkhin2/annotation_info.TABLE.cleansed' INTO TABLE ANNO
 drop table chrUnique;
 create table chrUnique (select distinct query_org,chr from CHR);
 
-CREATE TABLE `orim`.`query` ( `id` INT NOT NULL AUTO_INCREMENT ,
-`date` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP ,
-`post` VARCHAR(255) NOT NULL , `private` BOOLEAN NOT NULL ,
-PRIMARY KEY (`id`)) ENGINE = InnoDB;
+CREATE TABLE `orim`.`query` ( `id` INT NOT NULL AUTO_INCREMENT , `date` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP ,
+`post` VARCHAR(255) NOT NULL , `private` BOOLEAN NOT NULL , `session` VARCHAR(255) NOT NULL, PRIMARY KEY (`id`)) ENGINE = InnoDB;
 
 #Organisms
 #Monocot, dicot, etc, common, latin, photo, version
