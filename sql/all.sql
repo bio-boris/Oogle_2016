@@ -51,6 +51,12 @@ ANNOTATIONS	CREATE TABLE `ANNOTATIONS` (
 
 LOAD DATA INFILE '/home/sadkhin2/annotation_info.TABLE.cleansed' INTO TABLE ANNOTATIONS fields terminated by '\t';
 
+#Create unique table
+drop table chrUnique;
+create table chrUnique (select distinct query_org,chr from CHR);
+
+
+
 #Organisms
 #Monocot, dicot, etc, common, latin, photo, version
 
