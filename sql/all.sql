@@ -59,12 +59,12 @@ CREATE TABLE `orim`.`query` ( `id` INT NOT NULL AUTO_INCREMENT , `date` TIMESTAM
 `post` VARCHAR(255) NOT NULL , `private` BOOLEAN NOT NULL , `session` VARCHAR(255) NOT NULL, PRIMARY KEY (`id`)) ENGINE = InnoDB;
 
 CREATE TABLE `saved_genes` (
-    -> `id` INT NOT NULL AUTO_INCREMENT,
-    ->  `query_pac` int(11) NOT NULL,
-    ->  `subject_org` int(11) NOT NULL,
-    ->  `username` varchar(255) NOT NULL,
-    ->  PRIMARY KEY (`id`) 
-    -> ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+    `id` INT NOT NULL AUTO_INCREMENT,
+     `query_pac` int(11) NOT NULL,
+     `subject_org` int(11) NOT NULL,
+    `username` varchar(255) NOT NULL,
+     PRIMARY KEY (`id`) 
+     ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 #Organisms
 #Monocot, dicot, etc, common, latin, photo, version
