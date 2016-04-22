@@ -58,6 +58,14 @@ create table chrUnique (select distinct query_org,chr from CHR);
 CREATE TABLE `orim`.`query` ( `id` INT NOT NULL AUTO_INCREMENT , `date` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP ,
 `post` VARCHAR(255) NOT NULL , `private` BOOLEAN NOT NULL , `session` VARCHAR(255) NOT NULL, PRIMARY KEY (`id`)) ENGINE = InnoDB;
 
+CREATE TABLE `saved_genes` (
+    -> `id` INT NOT NULL AUTO_INCREMENT,
+    ->  `query_pac` int(11) NOT NULL,
+    ->  `subject_pac` int(11) NOT NULL,
+    ->  `username` varchar(255) NOT NULL,
+    ->  PRIMARY KEY (`id`) 
+    -> ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
 #Organisms
 #Monocot, dicot, etc, common, latin, photo, version
 
