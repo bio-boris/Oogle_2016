@@ -61,7 +61,7 @@ CREATE TABLE `orim`.`query` ( `id` INT NOT NULL AUTO_INCREMENT , `date` TIMESTAM
 CREATE TABLE `saved_genes` (
     `id` INT NOT NULL AUTO_INCREMENT,
      `query_pac` int(11) NOT NULL,
-     `subject_org` int(11) NOT NULL,
+     `subject_org` varchar(255) NOT NULL,
     `username` varchar(255) NOT NULL,
      PRIMARY KEY (`id`) 
      ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
