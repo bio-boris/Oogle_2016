@@ -181,14 +181,17 @@ def main():
 
     php_dump = sys.argv[1]
     input_dict = phpserialize.loads(php_dump)
+    print input_dict
     output_intervals = []
     organism = input_dict[max(input_dict.keys())].split('=')[1]
     del input_dict[max(input_dict.keys())]
     for interval in input_dict:
+        if not input_dict[interval]:
+            continue
         match = re.search('(.+)[-:_](\d+-\d+)', input_dict[interval])
         if match:
             fields = match.groups()
-            print fields
+            print 'FIELDS', fields
             chromo, region = fields[:2]
             try:
                 region_min, region_max = map(int, region.split('-'))
